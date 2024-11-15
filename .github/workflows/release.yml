@@ -42,7 +42,7 @@ jobs:
       - name: Deploy Github Page
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build
+          folder: .
           branch: gh-pages
 
       - name: Replace symlinks with actual files (Unix)
