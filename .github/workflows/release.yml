@@ -39,10 +39,12 @@ jobs:
         run: npm install
       - name: build static website
         run: npm run build
+      - name: ensure jekyll can't run
+        run: touch build/.nojekyll
       - name: Deploy Github Page
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .
+          folder: build
           branch: gh-pages
 
       - name: Replace symlinks with actual files (Unix)
