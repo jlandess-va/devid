@@ -16,6 +16,10 @@ jobs:
             arch: x86_64
             node: 20
     steps:
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
       - name: Checkout code
         uses: actions/checkout@v2
 
