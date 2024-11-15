@@ -22,6 +22,8 @@ jobs:
           python-version: '3.13'
       - name: check python version
         run: python --version
+      - name: Install duckdb python dependencies
+        run: pip install duckdb
       - name: Checkout code
         uses: actions/checkout@v2
 
