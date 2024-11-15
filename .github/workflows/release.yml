@@ -37,6 +37,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+      - name: run source
+        run: npm run sources
+      - name: run ci
+        run: npm ci
       - name: build static website
         run: npm run build
       - name: ensure jekyll can't run
