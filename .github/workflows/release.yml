@@ -2,10 +2,7 @@
 # This appears to work for Windows, but in macOS it has permissions issues. Linux not tested.
 name: Package and Release
 
-on:
-  push:
-    tags:
-      - '*'
+on: [push]
 
 jobs:
   build:
