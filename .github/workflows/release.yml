@@ -45,6 +45,8 @@ jobs:
         run: npm run build
       - name: ensure jekyll can't run
         run: touch build/.nojekyll
+      - name: run sources1
+        run: npm run sources
       - name: Deploy Github Page
         uses: JamesIves/github-pages-deploy-action@v4
         with:
