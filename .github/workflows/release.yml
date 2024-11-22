@@ -42,6 +42,16 @@ jobs:
           npm run build
       - name: ensure jekyll can't run
         run: touch build/.nojekyll
+      - name: change presentation directory
+        run: |
+          MY_STRING=$(cat << EOF
+          deployment:
+            basePath: /devid
+          EOF
+          )
+          touch build/evidence.config.yaml
+          echo "$MY_STRING" >> build/evidence.config.yaml
+              
       - name: Deploy Github Page
         uses: JamesIves/github-pages-deploy-action@v4
         with:
